@@ -1,0 +1,11 @@
+{
+    "node_name": "bootstrap",
+    "bootstrap" : true,
+    "server" : true,
+    "datacenter" : "dc1",
+    "data_dir" : "/home/vagrant/consul-data",
+    "ui": true,
+    "retry_join": ["172.20.20.11", "172.20.20.12", "172.20.20.13", "172.20.20.14"],
+    "bind_addr": "172.20.20.10",
+    "client_addr": "0.0.0.0"
+}

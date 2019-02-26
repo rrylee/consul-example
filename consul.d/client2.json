@@ -1,0 +1,24 @@
+{
+    "node_name": "client2",
+    "bootstrap" : false,
+    "server" : false,
+    "datacenter" : "dc1",
+    "data_dir" : "/home/vagrant/consul-data",
+    "retry_join": ["172.20.20.10", "172.20.20.11", "172.20.20.12", "172.20.20.13"],
+    "bind_addr": "172.20.20.14",
+    "client_addr": "0.0.0.0",
+    "services": [
+        {
+            "id": "socat-1",
+            "name": "socat",
+            "port": 8181,
+            "address": "172.20.20.14",
+            "check": {
+                "name": "check socat",
+                "args": ["/bin/bash", "/home/vagrant/check.sh"],
+                "interval": "10s",
+                "timeout": "1s"
+            }
+        }
+    ]
+}
